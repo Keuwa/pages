@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    font-family: 'Mountains of Christmas', serif;
+    color: white;
+  }
+
+.container {
+    height: 100%;
+}
+
+.row {
+    height: 50%
+}
+
+
+      .card {
+        width: 100%;
+        height: 300px;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
+        perspective: 1000px;
+        border: 1px solid #f1f1f1;
+        background-color: transparent;
+      }
+  
+      .card span {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 40px;
+        z-index: 500;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .20), #000000);
+    }
+    .card .revealed span {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .8));
+
+        align-items: flex-end;
+
+    }
+  
+      .card .secret {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        background-color: transparent;
+        background-position: center center;
+        background-size: cover;
+      }
+      .card .secret .blur {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: inherit;
+        filter: blur(35px);
+      }
+      .card .revealed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+  
+      .card>div {
+          opacity: 0;
+          transition: all .3s;
+      }
+      .card>div.show{
+          opacity: 1;
+      }
+
+      .bg svg.reverse {
+            transform: scaleX(-1);
+      }
